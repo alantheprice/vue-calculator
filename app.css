@@ -1,5 +1,10 @@
 html, * {
-    box-sizing: content--box;
+    box-sizing: border-box;
+}
+
+.inline-header {
+    display: inline-block;
+    margin: 20px;
 }
 
 .flex__row {
@@ -24,9 +29,9 @@ html, * {
 }
 
 .calc__container {
-    width: 560px;
-    max-width: 550px;
-    height: 690px;
+    width: 590px;
+    max-width: 565px;
+    height: 710px;
     border-radius: 5px;
     border: 1px solid #555;
     box-shadow: 2px 2px 10px #777;

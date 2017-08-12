@@ -6,12 +6,16 @@ var app = new Vue({
   	el: '#app',
   	template: `
   		<div>
-			<h2>{{message}}</h2>
+			<h2 class="inline-header">{{message}}</h2> <span><a :href="link.href">{{link.title}}</a></span>
 			<calculator></calculator>
 		</div>`,
 	data() {
 		return {
-			message: 'Calculator Test vue.js'
+			message: 'Calculator Test vue.js',
+			link: {
+				title: 'vue.js site',
+				href: 'https://vuejs.org/'
+			}
 		}
 	}
 })
