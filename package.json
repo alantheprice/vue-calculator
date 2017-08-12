@@ -1,0 +1,19 @@
+{
+  "name": "calculator-vue-test",
+  "version": "1.0.0",
+  "description": "Quick vue application to build a calculator.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "alan@theprices.us",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "protoype"
+  ],
+  "dependencies": {
+    "es6-import": "^1.2.1"
+  }
+}
