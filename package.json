@@ -14,6 +14,6 @@
     "protoype"
   ],
   "dependencies": {
-    "es6-import": "^1.2.1"
+    "es6-import": "^1.3.0"
   }
 }
