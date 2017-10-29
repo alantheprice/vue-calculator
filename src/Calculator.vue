@@ -8,4 +8,4 @@
     </div>
 </template>
 
-<script src="CalcImp.js"></script>
+<script src="calcImp.js"></script>

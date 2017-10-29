@@ -1,5 +1,5 @@
-import Vue from 'https://unpkg.com/vue'
-import Calculator from './calculator.vue'
+import Vue from 'vue'
+import Calculator from './Calculator.vue'
 
 // create a root instance
 var app = new Vue({
