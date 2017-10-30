@@ -22,9 +22,17 @@ const mimeTypes = {
     ".wav": "audio/wav"
 };
 
+const ALLOWED_PATHS = ["/src/*", "/app.css", "/index.html"];
+
 http.createServer(function (request, response) {
     console.log(["Url:", request.url].join(" "));
     console.log(__dirname);
+
+    if (!urlIsAllowed(request.url)) {
+        response.writeHead(403, "Path not allowed");
+	response.end();
+	return
+    }
 
     // only add a dot to the current path if it is not already added.
     var filePath = (request.url.indexOf(".") === 0) ? request.url : "." + request.url;
@@ -50,5 +58,14 @@ http.createServer(function (request, response) {
     });
 
 }).listen(port);
+
+function urlIsAllowed(url) {
+    return ALLOWED_PATHS.some((pth) => {
+	if (pth.indexOf("*") > -1) {
+	    return url.indexOf(pth.replace("*", "")) > -1 
+	}
+	return url === pth
+    })
+}
 
 console.log(["Server running at http://127.0.0.1:", port, "/"].join(""));
