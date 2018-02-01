@@ -22,7 +22,7 @@ const mimeTypes = {
     ".wav": "audio/wav"
 };
 
-const ALLOWED_PATHS = ["/src/*", "/app.css", "/index.html"];
+const ALLOWED_PATHS = ["/src/*", "/app.css", "/index.html", "/node_modules/es6-import/importer.js"];
 
 http.createServer(function (request, response) {
     console.log(["Url:", request.url].join(" "));
@@ -30,8 +30,8 @@ http.createServer(function (request, response) {
 
     if (!urlIsAllowed(request.url)) {
         response.writeHead(403, "Path not allowed");
-	response.end();
-	return
+	    response.end();
+	    return
     }
 
     // only add a dot to the current path if it is not already added.

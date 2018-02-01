@@ -12,6 +12,8 @@ html, * {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 500px;
+    max-height: 100vw;
 }
 
 .flex__row--reverse {
@@ -30,9 +32,9 @@ html, * {
 }
 
 .calc__container {
-    width: 590px;
-    max-width: 565px;
-    height: 710px;
+    width: 550px;
+    margin: 20px;
+    max-width: calc(100vw - 60px);
     border-radius: 5px;
     border: 1px solid #555;
     box-shadow: 2px 2px 10px #777;
@@ -52,19 +54,19 @@ html, * {
 }
 
 .numpad {
-    width: 400px;
-    height: 500px;
+    padding: 20px 0;
+    width: 75%;
 }
 
 .operators {
-    width: 120px;
-    height: 530px;
+    padding: 20px 0;
+    width: calc(25% - 20px);
 }
 
 .calc__item {
     text-align: center;
-    font-size: 45px;
-    line-height: calc(300px /3);
+    font-size: 4.5vh;
+    line-height: calc(20% - 20px);
     font-family: "Helvetica";
     border-radius: 50%;
     color: #FFF;
@@ -74,8 +76,8 @@ html, * {
 
 .calc__item.numpad {
     background-color: #406080;
-    width: calc(30% - 8px);
-    height: calc(25% - 8px);
+    width: calc(30% - 10px);
+    height: calc(25% - 20px);
 }
 
 .calc__item.operator {

@@ -8,10 +8,12 @@ let operations = {
     "-": (a, b) => a - b,
     "*": (a, b) => a * b,
     "/": (a, b) => a / b
+
 }
 
 export default {
     name: 'calculator',
+    // don't
     components: {
         Numpad,
         Operators

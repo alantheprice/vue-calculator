@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Calculator from './Calculator.vue'
 
+addServiceWorker()
+
 // create a root instance
 var app = new Vue({
   	el: '#app',
@@ -22,3 +24,16 @@ var app = new Vue({
 		}
 	}
 })
+
+function addServiceWorker() {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('./sw.js').then((registration) => {
+			console.log('Service worker registration succeeded:', registration);
+		}).catch(function(error) {
+			console.log('Service worker registration failed:', error);
+		});
+	} else {
+		console.log('Service workers are not supported.');
+
+	}
+}
