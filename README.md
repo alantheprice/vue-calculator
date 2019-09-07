@@ -4,3 +4,5 @@ Just a simple test to play around with vue as a framework and learn some pattern
 
 Changelog: 
 * Added a service worker
+
+[Live Demo](https://alantheprice.github.io/vue-calculator/)
